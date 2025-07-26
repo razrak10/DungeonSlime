@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary.Audio;
 using MonoGameLibrary.Input;
 
 namespace MonoGameLibrary;
@@ -45,6 +46,11 @@ public class Core : Game
     /// Gets or Sets a value that indicates if the game should exit when the esc key on the keyboard is pressed.
     /// </summary>
     public static bool ExitOnEscape { get; set; }
+
+    /// <summary>
+    /// Gets the static instance of the <see cref="AudioController"/> used for managing audio operations.
+    /// </summary>
+    public static AudioController Audio { get; private set; }
 
     /// <summary>
     /// Creates a new Core instance.
@@ -102,12 +108,33 @@ public class Core : Game
 
         // Create a new input manager
         Input = new InputManager();
+
+        // Create a new audio controller
+        Audio = new AudioController();
+    }
+
+    /// <summary>
+    /// Releases resources used by the audio controller and performs any additional cleanup required when unloading
+    /// content.
+    /// </summary>
+    /// <remarks>This method should be called to ensure that all audio resources are properly disposed of when
+    /// they are no longer needed. It also calls the base class implementation to handle any additional unloading
+    /// tasks.</remarks>
+    protected override void UnloadContent()
+    {
+        // Dispose of the audio controller
+        Audio.Dispose();
+
+        base.UnloadContent();
     }
 
     protected override void Update(GameTime gameTime)
     {
         // Update the input manager
         Input.Update(gameTime);
+
+        // Update the audio controller
+        Audio.Update();
 
         if (ExitOnEscape && Input.Keyboard.IsKeyDown(Keys.Escape))
         {
