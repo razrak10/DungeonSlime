@@ -8,6 +8,15 @@ using System.Xml.Linq;
 
 namespace MonoGameLibrary.Graphics
 {
+    /// <summary>
+    /// Represents a grid-based tilemap that organizes and renders tiles from a tileset.
+    /// </summary>
+    /// <remarks>A tilemap is a two-dimensional grid of tiles, where each tile corresponds to a specific
+    /// region in a tileset. This class provides functionality for creating, modifying, and rendering tilemaps. It
+    /// supports operations such as setting tiles by index or grid coordinates, retrieving tile texture regions, and
+    /// rendering the tilemap using a sprite batch.  The tilemap is initialized with a specified number of rows and
+    /// columns, and uses a tileset to define the appearance of its tiles. Each tile can be scaled independently, and
+    /// the tilemap can be loaded from an XML configuration file.</remarks>
     public class Tilemap
     {
         private readonly Tileset _tileset;

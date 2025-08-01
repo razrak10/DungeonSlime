@@ -1,5 +1,11 @@
 ﻿namespace MonoGameLibrary.Graphics
 {
+    /// <summary>
+    /// Represents a collection of tiles derived from a texture region, organized into a grid.
+    /// </summary>
+    /// <remarks>A tileset is constructed from a texture region and divided into tiles of uniform width and
+    /// height. It provides methods to retrieve individual tiles by index or by their grid location (column and
+    /// row).</remarks>
     public class Tileset
     {
         private readonly TextureRegion[] _tiles;

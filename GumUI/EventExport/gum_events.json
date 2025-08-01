@@ -1,0 +1,48 @@
+{
+  "UserEvents": {
+    "f55a0181e8b5cde1826ff3d6b6010fed8e05447ed80ee05a3bedbe074b9016b4": [
+      {
+        "NewName": "TileScene",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2025-07-28T09:59:07.3536166Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "TileScene",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2025-07-28T10:05:04.6757814Z"
+      },
+      {
+        "NewName": "MainMenu",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2025-07-28T10:05:10.1806314Z"
+      },
+      {
+        "NewName": "MainMenu.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-07-28T10:05:38.6724529Z"
+      },
+      {
+        "NewName": "MainMenu.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-07-28T10:05:43.7959085Z"
+      },
+      {
+        "NewName": "MainMenu.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-07-28T10:06:07.3629177Z"
+      }
+    ]
+  }
+}

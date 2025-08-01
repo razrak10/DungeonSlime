@@ -198,7 +198,7 @@ namespace MonoGameLibrary.Audio
         /// <remarks>This method pauses all active audio streams. It affects both the music being played
         /// through the media player and any sound effects that are currently active.</remarks>
         /// <returns></returns>
-        public async Task PauseAudio()
+        public void PauseAudio()
         {
             // Pause active songs playing
             MediaPlayer.Pause();

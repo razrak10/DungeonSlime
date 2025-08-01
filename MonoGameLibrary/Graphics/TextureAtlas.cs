@@ -9,6 +9,13 @@ using System.Xml.Linq;
 
 namespace MonoGameLibrary.Graphics
 {
+    /// <summary>
+    /// Represents a collection of texture regions and animations within a single texture.
+    /// </summary>
+    /// <remarks>A texture atlas is used to efficiently manage and access multiple sub-images (regions) and
+    /// animations within a single texture. This class provides methods to add, retrieve, and remove texture regions and
+    /// animations by name. It also supports creating sprites and animated sprites from these regions and
+    /// animations.</remarks>
     public class TextureAtlas
     {
         private Dictionary<string, TextureRegion> _regions;
